@@ -1,0 +1,121 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #111;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto auto;
+  gap: 10px;
+  max-width: 1400px; /* ← más ancho */
+  margin: 30px auto;
+  background-color: white;
+  padding: 10px;
+}
+
+.item {
+  background-color: white;
+  padding: 15px;
+}
+
+.text1 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #1dbfc1; /* ← color azul */
+  color: white; /* ← texto blanco */
+  padding: 30px; /* más espacio interno */
+  min-height: 500px; /* ← más alto */
+}
+
+.img1, .img2, .img3, .img4 {
+  background-size: cover;
+  background-position: center;
+  min-height: 250px;
+}
+
+.img1 {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  background-image: url('https://images03.nicepage.com/c461c07a441a5d220e8feb1a/d8ce469044b958508f4bdbab/blueschoolbackpackwithessentialsupplies_232148207678.jpg');
+}
+
+.img2 {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+  background-image: url('https://images03.nicepage.com/c461c07a441a5d220e8feb1a/9e4ce16148dd5cbeb1065410/89f80abe-6acd-d8dc-a341-3e571206975b.jpg');
+}
+
+.text2 {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.img3 {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+  background-image: url('https://images03.nicepage.com/c461c07a441a5d220e8feb1a/773a5aa425b1502aaac14708/f2b45624-c8f6-3aa0-0ee4-58adda3c89b0.jpg');
+}
+
+.img4 {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  background-image: url('https://images03.nicepage.com/c461c07a441a5d220e8feb1a/89993ff69c3e5244ad2bf1ba/blondestudentgirlissmilingholdingfoldernotebookherhandsuniversitybackground_101969664.jpg');
+}
+
+.text3 {
+  grid-column: 2 / 4;
+  grid-row: 3 / 4;
+  background-color: #ff6f3c;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+}
+
+.text3 h3 {
+  margin-bottom: 10px;
+}
+
+.text3 button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background-color: white;
+  color: #111;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    max-width: 100%;
+    
+  }
+
+  .text1, .img1, .img2, .text2, .img3, .img4, .text3 {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    height: 250px;
+  }
+
+  .text1, .text2, .text3 {
+    height: auto;
+  }
+
+  .text3 button {
+    background-color: #111;
+    color: white;
+  }
+}
